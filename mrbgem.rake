@@ -36,7 +36,7 @@ MRuby::Gem::Specification.new('mruby-cgroup') do |spec|
   file libcgroup_dir(build) do
     FileUtils.mkdir_p build.build_dir
 
-    unless File.exists? libcgroup_dir(build)
+    unless File.exist? libcgroup_dir(build)
       Dir.chdir(build.build_dir) do
         e = {}
         run_command e, 'git clone git://github.com/matsumoto-r/libcgroup.git'
